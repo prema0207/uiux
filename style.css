@@ -1,0 +1,88 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background:#fff;
+  color:#111;
+}
+
+.app {
+  max-width: 430px;       /* good size for iPhone 13/14 */
+  margin:0 auto;
+  border:1px solid #ddd;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+/* HEADER */
+.top-bar {
+  height:56px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 12px;
+  border-bottom:1px solid #ddd;
+}
+.top-bar img {height:28px;}
+.top-icons span {font-size:22px; margin-left:14px; cursor:pointer;}
+
+/* STORIES */
+.stories {
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  padding:10px 8px;
+  border-bottom:1px solid #eee;
+}
+.stories::-webkit-scrollbar {display:none;}
+.story {flex:0 0 auto; text-align:center; width:60px;}
+.story img {
+  width:60px; height:60px; border-radius:50%;
+  border:2px solid #e1306c;
+}
+.story p {font-size:11px; margin-top:4px; white-space:nowrap;}
+
+/* SUGGESTED */
+.suggested {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 12px;
+  border-bottom:1px solid #eee;
+}
+.sug-left {display:flex; align-items:center; gap:8px;}
+.sug-left img {width:36px;height:36px;border-radius:50%;}
+.sug-left h4 {font-size:14px; font-weight:600;}
+.sug-left h4 span {font-size:12px; color:#3897f0;}
+.sug-left p {font-size:12px; color:#666;}
+.follow-btn {
+  padding:4px 12px;
+  font-size:13px;
+  background:#3897f0;
+  color:white;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+/* POST */
+.post img {width:100%; display:block;}
+
+/* BOTTOM NAV */
+.bottom-nav {
+  height:50px;
+  border-top:1px solid #ddd;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  font-size:22px;
+  position:sticky;
+  bottom:0;
+  background:white;
+}
+
+/* ---- Responsive tweaks ---- */
+@media (max-width:390px){
+  .app {border:none;}
+}
